@@ -1,0 +1,16 @@
+{
+ "framework": "01_FedRAMP",
+ "title": "FedRAMP Moderate (NIST SP 800-53 rev5 baseline)",
+ "project": "HYPAR",
+ "basis": [
+  {
+   "check": "12_fedramp",
+   "status": "PASS",
+   "observed": "{\"authority\": \"FedRAMP\", \"control_ids\": [\"IA-2\", \"IA-5\", \"RA"
+  }
+ ],
+ "verdict": "CONTROLS EVIDENCED \u2014 all basis checks PASS",
+ "pax_provenance": "Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results \u2014 shared model component, not this project's verdict.",
+ "bench_sha3": "c329043c1a9488c7399d2de68f3c0a9273f4aa31d7c89f47370cd275bbebcf76",
+ "register_sha3": "3b74e1378508a1650a102b52a5f9e4d709ea098b80fc64dc124f6e2ddbf64bbc"
+}

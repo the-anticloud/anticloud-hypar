@@ -1,0 +1,360 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "HYPAR",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\ARCHITECTURAL_DESIGN\\HYPAR\\UPSTREAM_CLONE",
+  "git": {
+   "head": null,
+   "url": null,
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_unverified": true,
+   "note": "prior contamination (OPENMRS parent SHA + embedded token) removed; resolve via GitHub API before quoting"
+  }
+ },
+ "metrics": {
+  "files_total": 297,
+  "source_files_scanned": 62,
+  "lines_of_code": 12029,
+  "languages": {
+   ".json": 147,
+   ".parquet": 63,
+   ".js": 61,
+   ".metadata": 8,
+   ".value": 8,
+   "(none)": 3,
+   ".md": 3,
+   ".jpg": 1,
+   ".png": 1,
+   ".snappy": 1,
+   ".ts": 1
+  }
+ },
+ "licence": {
+  "spdx": "MIT",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 9,
+  "unique": 9,
+  "by_ecosystem": {
+   "npm": 9
+  },
+  "list": [
+   {
+    "ecosystem": "npm",
+    "name": "@eslint/js",
+    "version": "10.0.1",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "@types/node",
+    "version": "26.6.3",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "@vitest/coverage-v8",
+    "version": "5.0.2",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "eslint",
+    "version": "10.11.0",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "eslint-plugin-jsdoc",
+    "version": "64.5.4",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "globals",
+    "version": "17.12.0",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "hyparquet-compressors",
+    "version": "1.1.2",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "typescript",
+    "version": "7.0.2",
+    "source_file": "package.json",
+    "raw": ""
+   },
+   {
+    "ecosystem": "npm",
+    "name": "vitest",
+    "version": "5.0.2",
+    "source_file": "package.json",
+    "raw": ""
+   }
+  ]
+ },
+ "owasp_top10": {
+  "total_findings": 6,
+  "files_with_findings": 6,
+  "severity": {
+   "high": 0,
+   "medium": 2,
+   "low": 4
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A03-Injection": {
+    "count": 0,
+    "findings": []
+   },
+   "A04-InsecureDesign": {
+    "count": 4,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "src/delta.js",
+      "line": 43,
+      "cwe": "CWE-",
+      "snippet": "let bits = BigInt(reader.view.getUint32(reader.offset, true) >>> bitpackPos) & mask // TODO: don't re-read value every time"
+     },
+     {
+      "severity": "low",
+      "file": "src/query.js",
+      "line": 42,
+      "cwe": "CWE-",
+      "snippet": "// TODO: if expected > group size, start fetching next groups"
+     },
+     {
+      "severity": "low",
+      "file": "src/read.js",
+      "line": 161,
+      "cwe": "CWE-",
+      "snippet": "// TODO: validate options (start, end, columns, etc)"
+     },
+     {
+      "severity": "low",
+      "file": "src/rowgroup.js",
+      "line": 174,
+      "cwe": "CWE-",
+      "snippet": "// TODO: do it without flatten"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 0,
+    "findings": []
+   },
+   "A06-VulnerableComponents": {
+    "count": 0,
+    "findings": []
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 0,
+    "findings": []
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 2,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "benchmark.js",
+      "line": 14,
+      "cwe": "CWE-918",
+      "snippet": "const res = await fetch(url)"
+     },
+     {
+      "severity": "medium",
+      "file": "src/utils.js",
+      "line": 144,
+      "cwe": "CWE-918",
+      "snippet": "const res = await fetch(url, { ...requestInit, method: 'HEAD' })"
+     }
+    ]
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 0,
+  "files_with_findings": 0,
+  "severity": {
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:020ccf99-4ae1-51db-b2da-2adfd56dc8cf",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T06:49:23Z",
+   "component": {
+    "type": "application",
+    "name": "HYPAR",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/HYPAR@83b357604d34",
+    "purl": "pkg:generic/anticloud/HYPAR@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "MIT"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": ""
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": [
+   {
+    "type": "library",
+    "name": "@eslint/js",
+    "version": "10.0.1",
+    "purl": "pkg:npm/@eslint/js@10.0.1",
+    "bom-ref": "npm/@eslint/js@10.0.1"
+   },
+   {
+    "type": "library",
+    "name": "@types/node",
+    "version": "26.6.3",
+    "purl": "pkg:npm/@types/node@26.6.3",
+    "bom-ref": "npm/@types/node@26.6.3"
+   },
+   {
+    "type": "library",
+    "name": "@vitest/coverage-v8",
+    "version": "5.0.2",
+    "purl": "pkg:npm/@vitest/coverage-v8@5.0.2",
+    "bom-ref": "npm/@vitest/coverage-v8@5.0.2"
+   },
+   {
+    "type": "library",
+    "name": "eslint",
+    "version": "10.11.0",
+    "purl": "pkg:npm/eslint@10.11.0",
+    "bom-ref": "npm/eslint@10.11.0"
+   },
+   {
+    "type": "library",
+    "name": "eslint-plugin-jsdoc",
+    "version": "64.5.4",
+    "purl": "pkg:npm/eslint-plugin-jsdoc@64.5.4",
+    "bom-ref": "npm/eslint-plugin-jsdoc@64.5.4"
+   },
+   {
+    "type": "library",
+    "name": "globals",
+    "version": "17.12.0",
+    "purl": "pkg:npm/globals@17.12.0",
+    "bom-ref": "npm/globals@17.12.0"
+   },
+   {
+    "type": "library",
+    "name": "hyparquet-compressors",
+    "version": "1.1.2",
+    "purl": "pkg:npm/hyparquet-compressors@1.1.2",
+    "bom-ref": "npm/hyparquet-compressors@1.1.2"
+   },
+   {
+    "type": "library",
+    "name": "typescript",
+    "version": "7.0.2",
+    "purl": "pkg:npm/typescript@7.0.2",
+    "bom-ref": "npm/typescript@7.0.2"
+   },
+   {
+    "type": "library",
+    "name": "vitest",
+    "version": "5.0.2",
+    "purl": "pkg:npm/vitest@5.0.2",
+    "bom-ref": "npm/vitest@5.0.2"
+   }
+  ]
+ },
+ "elapsed_seconds": 1.71
+}
