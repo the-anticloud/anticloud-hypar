@@ -540,10 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "f46b9a791977201c6c04c1794b4a3db075c915d8",
-   "url": "https://github.com/hyparam/hyparquet",
-   "branch": "master",
-   "sha_verified_from": "GitHub API commits/master | unified 2026-10-14 (API-exists + content/clone anchor)"
+   "url": "https://github.com/debog/hypar",
+   "head": "7b03b9803f67084639799f3b1aca331c4268784c",
+   "sha_verified_from": "revendor fix 2026-10-17",
+   "previous_substitute": "https://github.com/hyparam/hyparquet"
   }
  }
 }

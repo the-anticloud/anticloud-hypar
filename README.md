@@ -1,14 +1,12 @@
 # HYPAR
 
-> Dependency free since 2023! **Hyparquet** is a JavaScript library for parsing [Apache Parquet](https://parquet.apache.org) files in the browser. Apache Parquet is a popular columnar storage format that is widely used in data engineering, data science, and machine learning applications for storing large datasets. Hyparquet is designed to read parquet files efficiently over http, so that parquet files in cloud storage can be queried directly from the browser without needing a server.
+> This directory contains the full 30-folder standard documentation set for `HYPAR`:
 
-**Category:** ARCHITECTURAL_DESIGN · **Ecosystem:** python · **Vendored upstream:** https://github.com/hyparam/hyparquet · **Pinned commit:** `f46b9a791977201c6c04c1794b4a3db075c915d8` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/hyparam/hyparquet` as the implementation for the `HYPAR` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** ARCHITECTURAL_DESIGN · **Ecosystem:** python · **Vendored upstream:** https://github.com/debog/hypar · **Pinned commit:** `7b03b9803f67084639799f3b1aca331c4268784c` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-Dependency free since 2023! **Hyparquet** is a JavaScript library for parsing [Apache Parquet](https://parquet.apache.org) files in the browser. Apache Parquet is a popular columnar storage format that is widely used in data engineering, data science, and machine learning applications for storing large datasets. Hyparquet is designed to read parquet files efficiently over http, so that parquet files in cloud storage can be queried directly from the browser without needing a server.
+This directory contains the full 30-folder standard documentation set for `HYPAR`:
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
@@ -63,7 +61,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-e2596cded9547f5cc248be12671f2da14eea9cca988fa32f7ee3032d1583ec46
+aa9cf72976e7f107b71c7407ca6fc24fc4ca7b38969cae1036a23854f643adcd
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
