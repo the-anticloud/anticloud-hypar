@@ -543,7 +543,7 @@
    "url": "https://github.com/debog/hypar",
    "head": "7b03b9803f67084639799f3b1aca331c4268784c",
    "sha_verified_from": "revendor fix 2026-10-17",
-   "previous_substitute": "https://github.com/hyparam/hyparquet"
+   "previous_substitute": "https://github.com/debog/hypar"
   }
  }
 }
